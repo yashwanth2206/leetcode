@@ -1,0 +1,16 @@
+class Solution {
+    public int smallestIndex(int[] a) {
+        int n=a.length;
+        for(int i=0;i<n;i++){
+            int ele=a[i];
+            int sum=0;
+            while(ele>0){
+                int d=ele%10;
+                sum=sum+d;
+                ele/=10;
+            }
+            if(sum==i) return i;
+        }
+        return -1;
+    }
+}
